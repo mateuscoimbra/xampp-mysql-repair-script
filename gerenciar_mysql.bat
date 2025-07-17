@@ -72,8 +72,7 @@ echo Arquivos: aria_log*, ib_buffer_pool, ib_logfile*, multi-master.info, my.ini
 echo Pastas: mysql, performance_schema, phpmyadmin, test
 
 REM Use ROBOCOPY para copiar tudo, exceto os itens especificados.
-REM /S: Copia subdiretorios, exceto os vazios.
-REM /E: Copia subdiretorios, incluindo os vazios. (Mais seguro para manter a estrutura)
+REM /E: Copia subdiretorios, incluindo os vazios.
 REM /XF: Exclui arquivos.
 REM /XD: Exclui diretorios.
 robocopy "data_old%NEXT_SEQ%" "data" /E /XF aria_log.00000001 aria_log_control ib_buffer_pool ib_logfile0 ib_logfile1 multi-master.info my.ini mysql.pid mysql_error.log /XD mysql performance_schema phpmyadmin test
